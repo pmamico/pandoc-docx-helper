@@ -46,7 +46,7 @@ class DocxPagebreak(object):
             elif elem.text == r"\toc":
                 if (doc.format == "docx"):
                     pf.debug("Table of Contents")
-                    para = [pf.Para(pf.Str("Table"), pf.Space(), pf.Str("of"), pf.Space(), pf.Str("Contents"))]
+                    para = [pf.Para(pf.Str("Tartalomjegyzék"))]
                     div = pf.Div(*para, attributes={"custom-style": "TOC Heading"})
                     elem = [div, self.toc]
                 else:
